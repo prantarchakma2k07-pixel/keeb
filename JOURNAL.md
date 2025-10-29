@@ -6,11 +6,7 @@
   ==================================================================
 -->
 
-This is my journal of the design and building process of **split keeb!**.  
-You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/107).
-
-
-## 10/4/2025 5 PM - finished the schematic  
+## 10/4/2025 12 PM - finished the schematic  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzM5LCJwdXIiOiJibG9iX2lkIn19--421bb53f06080beaa43b5df7d3e8110299eba26c/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzQwLCJwdXIiOiJibG9iX2lkIn19--8d02e12d96ff1bd974cedaeaf90bf05bf13815ea/image.png)
@@ -18,7 +14,7 @@ Set up the project, added the key matrix and seedstudio, and got them added to t
 Researched how to make a USB hub, how the USB protocol worked, chose [this](https://www.microchip.com/en-us/product/USB2512) IC, added a USB-C upstream, and two USB-A downstream [1hr 45min]
 Had a lot of fun starting a larger project: my only other real experience with PCBs was the Macropad from Highway (which was also fun). I'm now looking to work on routing, then CAD  
 
-## 10/4/2025 6 PM - assigned footprints, fixed electrical rules checker errors  
+## 10/4/2025 1 PM - assigned footprints, fixed electrical rules checker errors  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzQzLCJwdXIiOiJibG9iX2lkIn19--5b7187ca1be7610b04fd1b8a28005d0036b2e6d9/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MzQ0LCJwdXIiOiJibG9iX2lkIn19--aeab47944c31b7bb3669668964a8b2b1368d3049/image.png)
@@ -27,7 +23,7 @@ I fixed the ERC errors by adding no connect flags to the unused pins, I assigned
 Note: Game of Thrones OST is great for PCB work :), Celeste is good too (used that last commit)
 ps. I always include the Windows Stopwatch screenshot as proof of how long I spent working on each commit  
 
-## 10/4/2025 10 PM - worked on routing the pcb  
+## 10/4/2025 5 PM - worked on routing the pcb  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDMwLCJwdXIiOiJibG9iX2lkIn19--777b64de8e15c5b4af84a0c2e3dec0e2954f72dd/image.png)
 This took much longer than I expected, but it was lots of fun. I started by organising all the components on the PCB, which took about an hour on its own. I then routed the processors on top for about an hour, and, lastly, routed the keys for the last hour. All I have left to route are the ~20 traces going between the halves of the board. I'm quite happy I was able to keep this to two layers. I thought I'd have to bump it up to three for the areas around the USB hub's IC. It's messy, but I think it'll work
@@ -51,7 +47,7 @@ PCBway sent some feedback on the PCB, so I went ahead and incorporated that into
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTgxLCJwdXIiOiJibG9iX2lkIn19--651884759936a08b3cdc7133112d931b45cab104/image.png)
 They wanted me to move the USBC pads further from the edge of the board and to check the clearances between the pads of the IC. I've made changes and resent the Gerbers. I'll finish up the programming and CAD, then submit :)  
 
-## 10/8/2025 - worked on CAD for the case  
+## 10/8/2025 6 PM - worked on CAD for the case  
 
 this took way too long lmao
 I worked on this throughout the school day (thanks to my Spanish/bio teachers, the goat)
@@ -64,7 +60,7 @@ this is the full cad
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEzNSwicHVyIjoiYmxvYl9pZCJ9fQ==--13488878b17e89b3f650997acd8ff9c20a460d65/image.png)
 This is the timer lmao![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEzNCwicHVyIjoiYmxvYl9pZCJ9fQ==--1f43bceb70dcef710967ca6754f88135e2666c68/image.png)  
 
-## 10/9/2025 12 AM - firmware :)  
+## 10/8/2025 7 PM - firmware :)  
 
 The firmware went a lot faster this time, now that I have experience from my Macropad, but the longest time will be debugging this thing once it arrives (that took so long on the Macropad)
 I made two files, left and right.py, in KMK that I can flash to the two seed studios
@@ -73,20 +69,27 @@ Also found a missing via in the PCB while looking at it, so I fixed that lmao
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--2ef5c9fbbc9e2e736e19a7f9631d5389b1327f06/image.png)
   
 
-## 10/9/2025 1 AM - wrote the readme and organised the files  
+## 10/8/2025 8 PM - wrote the readme and organised the files  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE0MywicHVyIjoiYmxvYl9pZCJ9fQ==--103774b51cc69808d8fbdc18cbd7ec90bf062b0b/image.png)
 I went ahead and wrote the README, including links to the CAD models, PCBs, etc., alongside a description of what's special about this keyboard and how the firmware works (KMK). Short devlog today. Listened to music from FF and Ori and the Will of the Wisps :)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--c05ae0f9c5afbdabfeb78a0160c7624d7f0117d3/image.png)
   
 
-## 10/9/2025 1 PM - finished BOM and wrapped up project  
+## 10/9/2025 - finished BOM and wrapped up project  
 
 I went through and reviewed the pcb, reread the FW, and found all my parts on aliexpress, and wrote the final BOM. The PCBWAY quote was also approved.
 aliexpress screenshot with everything:![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTIyMCwicHVyIjoiYmxvYl9pZCJ9fQ==--c511fc1ba4789b9a046201a9cfcb6ca0cc29f233/image.png)
 
 Total is under 100!
 (the pcb was verry expensive so i opted to 3d print keycaps and self source some parts from things i already had to reduce cost)
+
+  
+
+## 10/28/2025 - Started working on assembling   
+
+Soldered on the first 11 keys and corresponding diodes, as well as the first seed studio. This took an hour, and I have to go do homework now 😭 I wish I had enough time to just do the whole thing it was so much fun to SMD for the first time![IMG_5506](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQxNSwicHVyIjoiYmxvYl9pZCJ9fQ==--2b83f214a950ebcb1b828733171043fcb64a1035/IMG_5506.jpeg)
+![IMG_5505](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--134fbf413e49be52d7a4ad1f57987425ae569c27/IMG_5505.jpeg)![IMG_5507](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQxNywicHVyIjoiYmxvYl9pZCJ9fQ==--552ac748abac47d5646ae3db1aadf7f355974ffd/IMG_5507.jpeg)
 
   
 
