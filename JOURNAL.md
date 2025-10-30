@@ -93,8 +93,15 @@ Soldered on the first 11 keys and corresponding diodes, as well as the first see
 
   
 
-## 10/29/2025 - firmware is messing with my head  
+## 10/29/2025 9 PM - firmware is messing with my head  
 
 First, the board's boot partition is corrupted, so it wouldn't stay initialized long enough to flash software. Then the libraries on the board stopped working, so I spent a while debugging. Finally, Mcaffe (not my choice, it's bloatware but I have to use it) decided that now was the time to scan the entirety of my SSD and use all my RAM and CPU, so my system took 15 minutes to build a file. Then, it turns out the esp32 doesnt have the capabillity to emulate usb drives, so i had to mess with that, then i spent time messing with libraries because none of the ones i found were recognised nor compatible with the version of curcuitpython i was running which didnt have the usb libraries in it. I then was able to get come keys regonised by the board, and the bluetooth to connect, but unable to get the two sections to interact. i then has issues with memory, as my libraries were large compared to the amount of free space, so i had to mess around with compression and othter optimizaiton techniques to stil have enough memory to run the bluetooth alg. This led to installing WSL and linux vm, and i just gave up at that point because its late. ill try again at compiling fw in the morning![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjU5MywicHVyIjoiYmxvYl9pZCJ9fQ==--11ee8be92dcd174d626bea5d381c6d89b47dc76c/image.png)
+  
+
+## 10/29/2025 10 PM - switched to a new approach  
+
+stayed up even later bc i felt like it and decided to split between a sender python file (switched to micropython from curcutpyton as well) and a reciever file on the computer, because i accedentally bought the wrong esp version, the only one that doesnt suport HS HID, so its just sending keystorkes over serial, and the python program on the computer will interpret it and emulate the keyboard. its janky and i dont like it but it should work ... its really late now, the lsitener is working, i jsut need to solder up more keys
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjYxNywicHVyIjoiYmxvYl9pZCJ9fQ==--ee8c5f5d8e7e607d1afd2c5f614d768b3455ec3c/image.png)
   
 
