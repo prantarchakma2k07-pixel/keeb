@@ -93,3 +93,8 @@ Soldered on the first 11 keys and corresponding diodes, as well as the first see
 
   
 
+## 10/29/2025 - firmware is messing with my head  
+
+First, the board's boot partition is corrupted, so it wouldn't stay initialized long enough to flash software. Then the libraries on the board stopped working, so I spent a while debugging. Finally, Mcaffe (not my choice, it's bloatware but I have to use it) decided that now was the time to scan the entirety of my SSD and use all my RAM and CPU, so my system took 15 minutes to build a file. Then, it turns out the esp32 doesnt have the capabillity to emulate usb drives, so i had to mess with that, then i spent time messing with libraries because none of the ones i found were recognised nor compatible with the version of curcuitpython i was running which didnt have the usb libraries in it. I then was able to get come keys regonised by the board, and the bluetooth to connect, but unable to get the two sections to interact. i then has issues with memory, as my libraries were large compared to the amount of free space, so i had to mess around with compression and othter optimizaiton techniques to stil have enough memory to run the bluetooth alg. This led to installing WSL and linux vm, and i just gave up at that point because its late. ill try again at compiling fw in the morning![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjU5MywicHVyIjoiYmxvYl9pZCJ9fQ==--11ee8be92dcd174d626bea5d381c6d89b47dc76c/image.png)
+  
+
