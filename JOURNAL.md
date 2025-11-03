@@ -105,3 +105,14 @@ stayed up even later bc i felt like it and decided to split between a sender pyt
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjYxNywicHVyIjoiYmxvYl9pZCJ9fQ==--ee8c5f5d8e7e607d1afd2c5f614d768b3455ec3c/image.png)
   
 
+## 11/3/2025 - roundabout solution  
+
+spent a few hours and i came up with a new working solution. since the esp32c3 doesnt support usbhid, it sends data over serial, and a recieving python program in the host interprets the serial and emulates the keyb
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Nzg4MSwicHVyIjoiYmxvYl9pZCJ9fQ==--d96cfb9346916c1eb94b39ec960b1f06c93b2753/image.png)
+
+arduino ide also gave up so i ended up using esptool to flash binaries instead
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Nzg4OSwicHVyIjoiYmxvYl9pZCJ9fQ==--0e2abf993461b2d2473b1483fc229598c5cdce95/image.png)
+
+still a work in progress. python works but esp still doesnt  
+
