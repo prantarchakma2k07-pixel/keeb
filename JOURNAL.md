@@ -129,7 +129,7 @@ the two keys i have soldered up work now lets goooo
 
  now to solder the rest of the keys lmao  
 
-## 11/3/2025 2 PM - finished soldering the left half  
+## 11/3/2025 2:10 PM - finished soldering the left half  
 
 soldering the tiny diodes takes forever :crying emoji:
 
@@ -143,4 +143,14 @@ the solder fumes were giving me a headache so i grabbed a fan lmao
 
 ![WIN_20251103_14_10_10_Pro](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODE0NiwicHVyIjoiYmxvYl9pZCJ9fQ==--4e6403e024385d6c1e06fd71cba13d3f9224452a/WIN_20251103_14_10_10_Pro.jpg)
   
+
+## 11/3/2025 2:59 PM - finished right hand side firmware  
+
+this was fast since was just changing the keymaps on the reciever for the right side
+
+i finished right hand side firmware
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODE1MiwicHVyIjoiYmxvYl9pZCJ9fQ==--c5275fe8dcad298d850db3a5c612e0e3b77bb4d0/image.png)
+
+since when i routed the keyboard, i connected the data lines on the left and right sides, i was able to test the right side with buttons from the left. When I solder the right side, I'll break the traces, so the halves are independent. This was useful for debugging but if i dont remove it then a button on the left will connect to the right, leading to misinputs  
 
