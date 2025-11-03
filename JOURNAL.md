@@ -105,7 +105,7 @@ stayed up even later bc i felt like it and decided to split between a sender pyt
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjYxNywicHVyIjoiYmxvYl9pZCJ9fQ==--ee8c5f5d8e7e607d1afd2c5f614d768b3455ec3c/image.png)
   
 
-## 11/3/2025 - roundabout solution  
+## 11/3/2025 11 AM - roundabout solution  
 
 spent a few hours and i came up with a new working solution. since the esp32c3 doesnt support usbhid, it sends data over serial, and a recieving python program in the host interprets the serial and emulates the keyb
 
@@ -115,4 +115,17 @@ arduino ide also gave up so i ended up using esptool to flash binaries instead
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Nzg4OSwicHVyIjoiYmxvYl9pZCJ9fQ==--0e2abf993461b2d2473b1483fc229598c5cdce95/image.png)
 
 still a work in progress. python works but esp still doesnt  
+
+## 11/3/2025 12 PM - FIRMWARE WORKS OMG  
+
+this took way too long lmao
+
+i ended up redoing the esp side, and switching back to python from cpp (ik cpp better but it was messing with me so python it is)
+
+the two keys i have soldered up work now lets goooo
+
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODEyOCwicHVyIjoiYmxvYl9pZCJ9fQ==--323d3f9c5492fcf6e7b622057a89b97402ae418a/image.png)
+
+ now to solder the rest of the keys lmao  
 
