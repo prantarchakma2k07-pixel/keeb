@@ -129,3 +129,18 @@ the two keys i have soldered up work now lets goooo
 
  now to solder the rest of the keys lmao  
 
+## 11/3/2025 2 PM - finished soldering the left half  
+
+soldering the tiny diodes takes forever :crying emoji:
+
+i finished and tested all 25 keys on the left hand side
+
+next, ill copy the left firmware and remap it for the right hand side
+
+the keycaps are printing rn
+
+the solder fumes were giving me a headache so i grabbed a fan lmao
+
+![WIN_20251103_14_10_10_Pro](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODE0NiwicHVyIjoiYmxvYl9pZCJ9fQ==--4e6403e024385d6c1e06fd71cba13d3f9224452a/WIN_20251103_14_10_10_Pro.jpg)
+  
+
