@@ -154,3 +154,10 @@ i finished right hand side firmware
 
 since when i routed the keyboard, i connected the data lines on the left and right sides, i was able to test the right side with buttons from the left. When I solder the right side, I'll break the traces, so the halves are independent. This was useful for debugging but if i dont remove it then a button on the left will connect to the right, leading to misinputs  
 
+## 11/4/2025 - Finished the keyboard 🔥  
+
+I js need to do the usb hub now, but I ordered the wrong type of usbc, and only one of the two chips, so I can’t really make the usb hub
+
+The keyboard itself works great tho ![IMG_5627](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODM0MywicHVyIjoiYmxvYl9pZCJ9fQ==--7ee6e049bfcfcdd7acb1f346bf590393e36ed0f1/IMG_5627.jpeg)
+  
+
