@@ -8,16 +8,52 @@ from tkinter import ttk, messagebox
 from pynput.keyboard import Controller, Key
 import re
 import queue
+import queue as _queue_mod
 
 # Mapping between matrix positions (row-major) and the human label we want to display.
 # We'll use the same labels as the firmware mapping:
 labels = [
     ["1", "X", "Shift", "C", "5"],
-    ["A", "S", "3", "WIN", "SPACE"],
+    ["A", "S", "3", "WIN", "Enter"],
     ["Z", "W", "E", "4", "V"],
     ["CTRL", "2", "D", "R", "F"],
     ["SPACE", "B", "G", "Q", "T"]
 ]
+
+# Workaround for a hardware short on the last row:
+# If any key in row 4 (bottom row) is pressed in a column, the hardware
+# reports all rows in that column as pressed. Filter those out in software
+# so only the row-4 key emits a key event.
+def fix_row4_shorts(bools):
+    if not isinstance(bools, (list, tuple)) or len(bools) != 25:
+        return bools
+    filtered = list(bools)
+    # bottom row indices are 20..24 (row index 4)
+    for c in range(5):
+        bottom_idx = 20 + c
+        if filtered[bottom_idx]:
+            # clear rows 0..3 in this column
+            for r in range(4):
+                filtered[r * 5 + c] = False
+    return filtered
+
+# Replace queue.Queue with a small subclass that filters "keys" items.
+# This ensures SerialReader can remain unchanged: any ("keys", bools)
+# put into the queue will be corrected automatically.
+
+class FilterQueue(_queue_mod.Queue):
+    def put(self, item, block=True, timeout=None):
+        try:
+            typ, payload = item
+        except Exception:
+            return super().put(item, block, timeout)
+        if typ == "keys" and isinstance(payload, list):
+            item = ("keys", fix_row4_shorts(payload))
+        return super().put(item, block, timeout)
+
+# Monkey-patch the queue.Queue constructor so the rest of the code
+# (which calls queue.Queue()) gets our filtered queue.
+_queue_mod.Queue = FilterQueue
 
 # Mapping to actual host key events for pynput emulation.
 # For modifier keys we pass Key.shift or Key.ctrl etc.
@@ -27,11 +63,13 @@ pynput_keymap = {
     "SPACE":"space",
     "Shift":"shift",
     "CTRL":"ctrl",
-    "WIN":"cmd"   # may map to cmd (mac) or left super
+    "WIN":"cmd",   # may map to cmd (mac) or left super
+    "Enter":"enter"
 }
 
 # Helper to convert name to pynput Key/char
 def to_pynput_key(name):
+    if name == "Enter": return Key.enter
     if name == "SPACE": return Key.space
     if name == "Shift": return Key.shift
     if name == "CTRL": return Key.ctrl
