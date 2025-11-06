@@ -2,6 +2,10 @@ Eshaan's Split Keeb!
 
 A seed studio rp2040 based ergonomic split keyboards to make essay writing slightly less boring! It has 50 keys (alphabet [26], numbers [10], ;,./ [4], two shifts [2], two ctrls [2], win key [1], two space keys [2], and two keys i plan to remap once the board comes in depending on what i fell like im missing), a built in USB hub, and a haptic motor!
 
+final assembly photo
+
+![1762393099309](image/README/1762393099309.jpg)
+
 PCB ([kicad](/keeb), [gerbers](/gerbers_final^2.zip)):
 ![pcb screenshot](<Screenshot 2025-10-05 120106.png>)
 CAD ([STEP file of assembly](/final_assembly.step), [top plate](/Top%20plate.step), [bottom plate](/Bottom%20plate.step)):
